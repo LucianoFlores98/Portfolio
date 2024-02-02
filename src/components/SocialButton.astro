@@ -1,0 +1,37 @@
+---
+const { action } = Astro.props;
+---
+
+<form action={action}>
+
+  <button class="rounded-full border flex justify-center items-center gap-x-2 py-2 px-4" 
+  {... Astro.props}
+  > 
+      <slot />
+  </button>
+
+</form>
+
+
+<style>
+button {
+  letter-spacing: 1.5px;
+  background-color: #02010185;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #00b894;
+  box-shadow: 0px 15px 20px #4bffdb;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+</style>

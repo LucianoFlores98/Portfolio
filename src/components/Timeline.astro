@@ -1,0 +1,26 @@
+---
+import Experience from '../components/Experience.astro';
+
+const EXPERIENCE = [
+    {
+        date: 'Actualmente...',
+        title: 'Desarrollador Fullstack ― ',
+        description: 
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus pharetra nulla, at venenatis tellus pulvinar et. Nullam at scelerisque sapien. Donec tincidunt fringilla cursus. Pellentesque pellentesque maximus risus imperdiet mattis. Quisque ut congue urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod eleifend est vel viverra.',
+        link: 'akslkadslksa',
+        company: "Epidata",
+        linkCompany: "#"
+    }]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">      
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <Experience {... experience} />
+            </li>
+        ))
+    }
+    
+</ol>
+

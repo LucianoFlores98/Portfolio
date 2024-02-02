@@ -1,17 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import LinkedIn from '../components/icons/LinkedIn.astro';
+import Github from '../components/icons/Github.astro';
+import SocialButton from '../components/SocialButton.astro';
+import Mail from '../components/icons/Mail.astro';
+import Timeline from '../components/Timeline.astro';
+import Briefcase from '../components/icons/Briefcase.astro';
 ---
 
-<Layout title="Hola soy Luciano!">
+<Layout title="Portfolio de Luciano Flores - Desarrollador y Programador fullstack con 2 años de experiencia"
+	description="Desarrollador fullstack"
+>
 	<main>
 
-		<section class="w-full lg:w-[740px] mx-auto py-44">
-
+		<SectionContainer class="py-44 pb-24">
 			<img 
-			class="rounded-full w-14 h-14 mb-4" 
+			class="rounded-full size-14 mb-4" 
 			src="https://avatars.githubusercontent.com/u/49958996?v=4" 
-			alt="Luciano Photo"
+			alt="Perfil Luciano"
 			/>
 
 			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">Hola! Soy Luciano 		
@@ -23,13 +31,38 @@ import Badge from '../components/Badge.astro';
 					<Badge>Open to work</Badge>
 				</a>
 			</h1>
-			<h2 class="text-2xl opacity-80 text-wrap">
-				<span>2 años de experiencia.</span><span class="text-yellow-200/90"> Desarrollador Fullstack y Analista Programador.</span> 
-				<span class="text-red-200/90"> De Misiones, Argentina 🇦🇷.</span>
-				<span class="opacity-75">Especializado en crear aplicaciones unicas</span>
+			<h2 class="text-2xl opacity-90 text-wrap">
+				<span>2 años de experiencia.</span><span class=" text-green-300 "> Desarrollador Fullstack y Analista Programador.</span> 
+				<span class="font-semibold text-yellow-100"> De Misiones, Argentina.</span>
+				<span class="opacity-75">Especializado en crear aplicaciones únicas.</span>
 			</h2>
 
-		</section>
+			<nav class="flex gap-x-4 mt-8">
 
+				<SocialButton action="https://www.linkedin.com/in/luciano-flores/">
+					<LinkedIn class="size-6"/>
+					LinkedIn
+				</SocialButton>
+
+				<SocialButton action="https://github.com/LucianoFlores98">
+					<Github class="size-6"/>
+					Github
+				</SocialButton>
+
+				<SocialButton action="mailto:lucianof603@gmail.com">
+					<Mail class="size-6"/>
+					lucianof603@gmail.com
+				</SocialButton>
+			</nav>
+
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-6" />
+				Experiencia Laboral
+			</h2>
+			<Timeline />
+		</SectionContainer>
 	</main>
 </Layout>
