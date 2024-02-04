@@ -1,0 +1,42 @@
+---
+const TAGS ={
+    NEXT: {
+        name: "Next.js",
+        class: "bg-black text-white",
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class:"bg-white text-[#73bcf6]",
+
+    }
+}
+
+const PROJECTS = [
+    {
+        title: 'EventsApp',
+        description: 'Aplicacion web para eventos de distintas indoles. Para la busqueda y creacion de los mismos a distintas personas. Validaciones de identidad, manejo de roles, creación y administracion de eventos. Listado de participantes. Compra de entradas, etc.',
+        link: '#',
+        github: '#',
+        image:'../../public/projects/EventsApp.webp',
+        tags: [TAGS.NEXT, TAGS.TAILWIND],
+    },
+]
+---
+
+{
+    PROJECTS.map(({image, title, description, tags}) => (
+        <article class="p-5">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul>
+                {tags.map(tag => (
+                    <li>{tag}</li>
+                ))}
+            </ul>
+            <img
+            class="rounded shadow-2xl shadow-white/10" 
+            src={image} 
+            alt={`Captura de pantalla del proyecto ${image}`}>
+        </article>
+    ))
+}
