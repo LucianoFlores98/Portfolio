@@ -1,13 +1,54 @@
 ---
+import Next from './icons/technologies/Next.astro';
+import Tailwind from './icons/technologies/Tailwind.astro';
+import React from './icons/technologies/React.astro';
+import Vue from './icons/technologies/Vue.astro';
+import Mongo from './icons/technologies/Mongo.astro';
+import Express from './icons/technologies/Express.astro';
+import PostgreSQL from './icons/technologies/PostgreSQL.astro';
+import Node from './icons/technologies/Node.astro';
+
+
 const TAGS ={
     NEXT: {
         name: "Next.js",
         class: "bg-black text-white",
+        icon: Next
     },
     TAILWIND: {
         name: "Tailwind CSS",
-        class:"bg-white text-[#73bcf6]",
-
+        class:"bg-[#003159] text-white",
+        icon: Tailwind
+    },
+    REACT: {
+        name: "React.js",
+        class: "",
+        icon: React
+    },
+    NODE: {
+        name:"Node.js",
+        class:"",
+        icon: Node
+    },
+    EXPRESS: {
+        name:"Express.js",
+        class: "",
+        icon: Express
+    },
+    VUE: {
+        name:"Vue",
+        class:"",
+        icon: Vue
+    },
+    POSTGRESQL: {
+        name:"PostgreSQL",
+        class:"",
+        icon: PostgreSQL
+    },
+    MONGODB: {
+        name:"MongoDB",
+        class:"",
+        icon: Mongo
     }
 }
 
@@ -28,9 +69,14 @@ const PROJECTS = [
         <article class="p-5">
             <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul>
+            <ul class="flex gap-x-4 flex-row mb-4">
                 {tags.map(tag => (
-                    <li>{tag}</li>
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>                            
+                            <tag.icon class="size-4" />
+                            {tag.name}
+                        </span>
+                    </li>
                 ))}
             </ul>
             <img

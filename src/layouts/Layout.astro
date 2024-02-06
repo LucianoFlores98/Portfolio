@@ -2,7 +2,7 @@
 import '@fontsource-variable/onest'
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
+import BgLines from '../components/Backgrounds/BgLines.astro';
 
 interface Props {
 	title: string;
@@ -23,15 +23,19 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body >
-		<div class="fixed top-0 z-[-2] h-dvh w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 		
+		<BgLines />
 		<Header />
 
 		<slot />
 
 		<Footer />
+
 	</body>
+	
 </html>
+
+
 <style is:global>
 	:root {
 		color-scheme: light dark;
@@ -46,6 +50,8 @@ const { title, description } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		background: rgb(33,47,60);
+		background: linear-gradient(180deg, rgba(33,47,60,1) 30%, rgba(0,0,0,1) 100%);
 	}
 
 	@media (prefers-reduced-motion: reduce){
@@ -54,4 +60,5 @@ const { title, description } = Astro.props;
 			scroll-behavior: auto;
 		}
 	}
+
 </style>

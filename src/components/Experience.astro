@@ -12,7 +12,7 @@ const {title, description, date, link, company, linkCompany} = Astro.props;
 ---
 
 <div
-    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+    class="w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dot"
 >
 </div>
 <time
@@ -50,3 +50,11 @@ const {title, description, date, link, company, linkCompany} = Astro.props;
         </svg>
     </a>
 )}
+
+<style>
+    .dot{
+        position: relative;
+        top: 0;
+        left: -22px;
+    }
+</style>
