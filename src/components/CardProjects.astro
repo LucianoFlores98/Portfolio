@@ -1,0 +1,134 @@
+---
+import Next from './icons/technologies/Next.astro';
+import Tailwind from './icons/technologies/Tailwind.astro';
+import React from './icons/technologies/React.astro';
+import Vue from './icons/technologies/Vue.astro';
+import Mongo from './icons/technologies/Mongo.astro';
+import Express from './icons/technologies/Express.astro';
+import PostgreSQL from './icons/technologies/PostgreSQL.astro';
+import Node from './icons/technologies/Node.astro';
+import Docker from './icons/technologies/Docker.astro';
+import Quasar from './icons/technologies/Quasar.astro';
+
+
+const TAGS ={
+    NEXT: {
+        name: "Next.js",
+        class: "bg-black text-white",
+        icon: Next
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class:"bg-cyan-600 text-white",
+        icon: Tailwind
+    },
+    REACT: {
+        name: "React.js",
+        class: "bg-teal-500	",
+        icon: React
+    },
+    NODE: {
+        name:"Node.js",
+        class:"bg-lime-500/50",
+        icon: Node
+    },
+    EXPRESS: {
+        name:"Express.js",
+        class: "bg-black",
+        icon: Express
+    },
+    VUE: {
+        name:"Vue",
+        class:"bg-green-600/80",
+        icon: Vue
+    },
+    POSTGRESQL: {
+        name:"PostgreSQL",
+        class:"bg-blue-950",
+        icon: PostgreSQL
+    },
+    MONGODB: {
+        name:"MongoDB",
+        class:"bg-green-400/70",
+        icon: Mongo
+    },
+    DOCKER: {
+        name:"Docker",
+        class:"bg-blue-500/50",
+        icon: Docker
+    },
+    QUASAR: {
+        name:"Quasar",
+        class:" bg-cyan-950",
+        icon: Quasar
+    }
+}
+
+const PROJECTS = [
+    {
+        title: 'Dinamic Gym App',
+        description: 'Solución para el manejo de asistencias y control de pagos para un cliente dueño de gimnasio. Se está desarrollando una app web desde la fases de relevamiento hasta su implantación y posterior mantenimiento.',
+        link: '#',
+        github: '#',
+        image:'/img/projects/DynamicGym.webp',
+        tags: [TAGS.EXPRESS,TAGS.NODE, TAGS.TAILWIND,TAGS.VUE,TAGS.POSTGRESQL],
+    },
+    {
+        title: 'EventsApp',
+        description: 'Aplicacion web para eventos de distintas indoles. Para la busqueda y creacion de los mismos a distintas personas. Validaciones de identidad, manejo de roles, creación y administracion de eventos. Listado de participantes. Compra de entradas, etc.',
+        link: '#',
+        github: '#',
+        image:'/img/projects/EventsApp.webp',
+        tags: [TAGS.EXPRESS,TAGS.NODE, TAGS.TAILWIND,TAGS.REACT,TAGS.POSTGRESQL],
+    },
+    {
+        title: 'IOT sensors',
+        description: 'Proyecto para trabajo interno de comunidades. App web donde utilizamos un broker para la simulación de un entorno IOT, utilizando en este caso ESP32 con micropython, conexión a internet y sensores. Manejo de usuarios, roles y estaciones.',
+        link: '#',
+        github: '#',
+        image:'/img/projects/IOT.webp',
+        tags: [TAGS.EXPRESS,TAGS.NODE,TAGS.VUE,TAGS.QUASAR,TAGS.MONGODB,TAGS.TAILWIND,TAGS.DOCKER],
+    },
+]
+---
+{
+    PROJECTS.map(({image, title, description, tags}) => (
+        <section class="card mb-8 rounded-xl">
+            <div class="flex flex-row gap-5">
+                <img
+                class="max-w-[50%] max-h-[300px] object-cover rounded-tl-xl" 
+                src={image} 
+                alt={`Captura de pantalla del proyecto ${image}`}>
+
+                <content class="grow">
+                    <h3 class="text-3xl font-semibold text-black mb-2 title mt-4">{title}</h3>
+                    <p class="text-lg text-pretty text-gray-900 mb-7">{description}</p>
+                </content>
+            </div>
+            <footer class="w-full bg-black py-1 rounded-b-xl">
+                <ul class="flex gap-x-4 flex-row flex-wrap ml-1">
+                        {tags.map(tag => (
+                            <li>
+                                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>                            
+                                    <tag.icon class="size-4" />
+                                    {tag.name}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+            </footer>
+        </section>
+    ))
+    }
+
+<style>
+.card {
+  transition: 0.1s;
+    background-color: rgb(235, 246, 255);
+}
+
+.card:hover {
+    scale: 1.01;
+}
+
+</style>

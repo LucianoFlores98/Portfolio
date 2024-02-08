@@ -9,7 +9,11 @@ import Mail from '../components/icons/Mail.astro';
 import Timeline from '../components/Timeline.astro';
 import Briefcase from '../components/icons/Briefcase.astro';
 import Code from '../components/icons/Code.astro';
-import Projects from '../components/Projects.astro';
+import CardProjects from '../components/CardProjects.astro';
+import AboutMe from '../components/AboutMe.astro';
+import User from '../components/icons/User.astro';
+import Contact from '../components/Contact.astro';
+
 ---
 
 <Layout title="Portfolio de Luciano Flores - Desarrollador y Programador fullstack con 2 años de experiencia"
@@ -19,8 +23,8 @@ import Projects from '../components/Projects.astro';
 
 		<SectionContainer class="py-44 pb-32">
 			<img 
-			class="rounded-full size-20 mb-4 shadow-lg shadow-black ring " 
-			src="https://avatars.githubusercontent.com/u/49958996?v=4" 
+			class="rounded-full size-20 mb-4 shadow-lg shadow-black ring-2 ring-emerald-600 object-cover" 
+			src="/img/profile/profilePic.webp" 
 			alt="Perfil Luciano"
 			/>
 
@@ -34,9 +38,9 @@ import Projects from '../components/Projects.astro';
 				</a>
 			</h1>
 			<h2 class="text-xl lg:text-2xl  text-wrap max-w-[700px]">
-				<span>2 años de experiencia.</span><span class=" text-green-300 "> Desarrollador Fullstack y Analista Programador.</span> 
-				<span class="font-semibold text-yellow-100"> De Misiones, Argentina.</span>
-				<span >Especializado en crear aplicaciones únicas.</span>
+				<span>≈2 años de experiencia.</span><span class=" text-green-300 "> Desarrollador Fullstack y Analista Programador.</span> 
+				<span class="font-semibold text-yellow-100"> De Córdoba, Argentina.</span>
+				<span></span>
 			</h2>
 
 			<nav class="flex gap-4 mt-8 flex-wrap">
@@ -65,13 +69,34 @@ import Projects from '../components/Projects.astro';
 			<Timeline />
 		</SectionContainer>
 
-		<SectionContainer id="proyectos">
+		<SectionContainer id="proyectos" class="w-screen">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Code class="size-6" />
 				Proyectos
 			</h2>
-			<Projects />
+			<CardProjects />
 		</SectionContainer>
 
+		<SectionContainer id="sobre-mi">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<User class="size-6" />
+				Sobre Mí
+			</h2>
+			<AboutMe/>
+		</SectionContainer>
+
+		<SectionContainer id="contacto">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Mail class="size-6" />
+				Hablemos!
+			</h2>
+			<Contact/>
+		</SectionContainer>
+
+		<section>
+			<ul class="List">
+				<li>Probadno</li>
+			</ul>
+		</section>
 	</main>
 </Layout>

@@ -17,12 +17,12 @@ const TAGS ={
     },
     TAILWIND: {
         name: "Tailwind CSS",
-        class:"bg-[#003159] text-white",
+        class:"bg-cyan-600 text-white",
         icon: Tailwind
     },
     REACT: {
         name: "React.js",
-        class: "",
+        class: "bg-teal-500	",
         icon: React
     },
     NODE: {
@@ -32,7 +32,7 @@ const TAGS ={
     },
     EXPRESS: {
         name:"Express.js",
-        class: "",
+        class: "bg-black",
         icon: Express
     },
     VUE: {
@@ -42,7 +42,7 @@ const TAGS ={
     },
     POSTGRESQL: {
         name:"PostgreSQL",
-        class:"",
+        class:"bg-blue-950",
         icon: PostgreSQL
     },
     MONGODB: {
@@ -54,19 +54,35 @@ const TAGS ={
 
 const PROJECTS = [
     {
+        title: 'Dinamic Gym App',
+        description: 'Aplicacion web para cliente propietario de gimnasio. Para la busqueda y creacion de los mismos a distintas personas. Validaciones de identidad, manejo de roles, creación y administracion de eventos. Listado de participantes. Compra de entradas, etc.',
+        link: '#',
+        github: '#',
+        image:'../../public/projects/DynamicGym.webp',
+        tags: [TAGS.EXPRESS, TAGS.TAILWIND,TAGS.REACT,TAGS.POSTGRESQL],
+    },
+    {
         title: 'EventsApp',
         description: 'Aplicacion web para eventos de distintas indoles. Para la busqueda y creacion de los mismos a distintas personas. Validaciones de identidad, manejo de roles, creación y administracion de eventos. Listado de participantes. Compra de entradas, etc.',
         link: '#',
         github: '#',
         image:'../../public/projects/EventsApp.webp',
-        tags: [TAGS.NEXT, TAGS.TAILWIND],
+        tags: [TAGS.EXPRESS, TAGS.TAILWIND,TAGS.REACT,TAGS.POSTGRESQL],
+    },
+    {
+        title: 'IOT sensors',
+        description: 'Aplicacion web para eventos de distintas indoles. Para la busqueda y creacion de los mismos a distintas personas. Validaciones de identidad, manejo de roles, creación y administracion de eventos. Listado de participantes. Compra de entradas, etc.',
+        link: '#',
+        github: '#',
+        image:'../../public/projects/IOT.webp',
+        tags: [TAGS.EXPRESS, TAGS.TAILWIND,TAGS.REACT,TAGS.POSTGRESQL],
     },
 ]
 ---
 
 {
     PROJECTS.map(({image, title, description, tags}) => (
-        <article class="p-5">
+        <article class="p-5 mb-10 rounded-2xl">
             <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
             <ul class="flex gap-x-4 flex-row mb-4">
@@ -80,7 +96,7 @@ const PROJECTS = [
                 ))}
             </ul>
             <img
-            class="rounded shadow-2xl shadow-white/10" 
+            class="rounded-2xl shadow-2xl shadow-white/10 aspect-video snap-center border-2 border-sky-300/50" 
             src={image} 
             alt={`Captura de pantalla del proyecto ${image}`}>
         </article>

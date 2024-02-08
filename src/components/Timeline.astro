@@ -6,11 +6,24 @@ const EXPERIENCE = [
         date: 'Actualmente...',
         title: 'Desarrollador Fullstack ― ',
         description: 
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus pharetra nulla, at venenatis tellus pulvinar et. Nullam at scelerisque sapien. Donec tincidunt fringilla cursus. Pellentesque pellentesque maximus risus imperdiet mattis. Quisque ut congue urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod eleifend est vel viverra.',
-        link: 'akslkadslksa',
+            'He participado en diversos proyectos de innovación que me han brindado la oportunidad de investigar, analizar e implementar tecnologías de vanguardia. Colaboré temporalmente en un proyecto gubernamental, donde desempeñé tareas de <b>testing.</b> Y también trabajé en proyectos internos desempeñando tareas de <b>analisis, diseño y desarrollo.</b>',
+        devMilestones:[
+            "Colaboré en la realización de pruebas y documentación en el proyecto Sistema Único de Denuncias por Violencia de Género (URGE) el cual comenzó a ser utilizado en las dependencias policiales de toda Argentina.",
+            "Participé en un proyecto interno de la empresa para el manejo de licitaciones. Donde realicé el relevamiento al personal de licitaciones, y posterior analisis, y desarrollo del aplicativo. Utilizando Figma para el prototipado de la UI y para el desarrollo Java, Spring, React, MongoDB, MySQL, Material UI & TypeScript",
+            "Dentro de las comunidades de la empresa, participé en el desarrollo de un proyecto IOT como desarrollador fullstack, donde se utilizó Vue, quasar, node.js, express.js, mongoDB y docker"
+        ],
+        otherMilestones:[
+            "Trabajé en el área IDI, donde exploramos conceptos y tecnologías tales como <i>I.A, Metaverso y Realidad aumentada.</i>",
+            "Impartí una charla sobre Metaverso a toda la empresa, dondé se generó cierto interés sobre el tema y posteriormente llevó a la creación de una comunidad interna dedicada a este tema y a la Realidad Virtual.",
+            "Me capacité para el uso de <b>Unreal Engine 5</b> y <b>Unity</b>, trabajé junto con capital humano en dicha comunidad en la creación y diseño de un espacio virtual para eventos de la empresa tales como charlas, reuniones e incluso usarlo para el onboarding.",
+            "Junto al equipo IDI, analizamos y desarrollamos un chatbot utilizando una plataforma, evaluando sus capacidades. Recibiendo asistencia por un equipo anglosajón, donde la barrera del idioma no fue un problema. Luego con nuestro analisis y producto final, realicé una presentación a nivel gerencial, la cual llevó a la decisión de avanzar en un proceso de partnership con dicha empresa.",
+            "Al tener conocimientos de <b>Unity</b> se me adjudicó la responsabilidad total de la creación de un MVP mobile de <b>Realidad aumentada<b/>."
+        ],
+        link: 'https://epidata.net/es/',
         company: "Epidata",
-        linkCompany: "#"
-    }]
+        linkCompany: "https://epidata.net/es/"
+    }
+]
 ---
 
 <ol class="border-s border-gray-200 ml-3">      
@@ -20,7 +33,7 @@ const EXPERIENCE = [
                 <Experience {... experience} />
             </li>
         ))
-    }
+    } 
     
 </ol>
 
