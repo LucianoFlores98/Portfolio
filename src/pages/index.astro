@@ -21,7 +21,6 @@ import Footer from '../components/Footer.astro';
 	description="Desarrollador fullstack"
 >
 	<main>
-
 		
 			<SectionContainer class="py-44 pb-32 px-5">
 				<img 
@@ -47,22 +46,20 @@ import Footer from '../components/Footer.astro';
 	
 				<nav class="flex gap-4 mt-8 flex-wrap">
 	
-					<SocialButton action="https://www.linkedin.com/in/luciano-flores/">
+					<SocialButton href="https://www.linkedin.com/in/luciano-flores/"  target="_blank" rel=”noopener noreferrer”>
 						<LinkedIn class="size-6"/>
 						LinkedIn
 					</SocialButton>
-	
-					<SocialButton action="https://github.com/LucianoFlores98">
+					<SocialButton href="https://github.com/LucianoFlores98" target="_blank" rel=”noopener noreferrer”>
 						<Github class="size-6"/>
 						Github
 					</SocialButton>
 					
-					<a href="mailto:lucianof603@gmail.com">
-					<SocialButton>
+					<SocialButton href="mailto:lucianof603@gmail.com">
 						<Mail class="size-6"/>
 						lucianof603@gmail.com
 					</SocialButton>
-					</a>
+
 				</nav>
 			</SectionContainer>
 
@@ -96,14 +93,14 @@ import Footer from '../components/Footer.astro';
 				
 				<div class="text-center">
 	
-					<CVButton class="mt-4"/>
+					<CVButton class="mt-8"/>
 
 	
 				</div>
 	
 			</SectionContainer>
 
-			<SectionContainer id="contacto" class="contacto">
+			<SectionContainer id="contacto" class="contacto px-5">
 				<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 					<Mail class="size-6" />
 					Hablemos!
