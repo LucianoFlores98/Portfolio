@@ -28,7 +28,7 @@
         message : document.querySelector("#message").value,
       }
 
-      if (params.email_id.value != null) {
+      if (params.email_id.value.length != 0 && params.message.value.length !=0) {
         emailjs.send("service_nchxjsj","template_7qd92o6",params).then(function(res){
         alert("Enviado con exito!",res.status);
       })
