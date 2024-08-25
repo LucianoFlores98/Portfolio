@@ -9,13 +9,30 @@ import PostgreSQL from './icons/technologies/PostgreSQL.astro';
 import Node from './icons/technologies/Node.astro';
 import Docker from './icons/technologies/Docker.astro';
 import Quasar from './icons/technologies/Quasar.astro';
-
+import AstroI from './icons/technologies/AstroI.astro';
+import NestJS from './icons/technologies/NestJS.astro';
+import TypeScript from './icons/technologies/TypeScript.astro';
 
 const TAGS ={
     NEXT: {
         name: "Next.js",
         class: "bg-black text-white",
         icon: Next
+    },
+    ASTRO: {
+        name: "Astro",
+        class: "bg-black text-white",
+        icon: AstroI
+    },
+    NESTJS: {
+        name: "NestJS",
+        class: "bg-black text-white",
+        icon: NestJS
+    },
+    TYPESCRIPT: {
+        name: "TypeScript",
+        class: "bg-black text-white",
+        icon: TypeScript
     },
     TAILWIND: {
         name: "Tailwind",
@@ -66,12 +83,20 @@ const TAGS ={
 
 const PROJECTS = [
     {
-        title: 'Dinamic Gym App',
-        description: 'Solución para el manejo de asistencias y control de pagos para un cliente dueño de gimnasio. Se está desarrollando una app web desde la fases de relevamiento hasta su implantación y posterior mantenimiento.',
+        title: 'Alakazam',
+        description: 'Plataforma Web para alquileres de largo plazo con un sistema de opiniones/puntuciones para las partes involucradas en el alquiler de un inmueble. - Análisis y diseño funcional. - Armado de contenedores con Docker compose, pensado en seguir una arquitectura de microservicios. - Autenticación y validación de identidad de los usuarios. (Aside project en desarrollo)',
         link: '#',
-        github: '#',
-        image:'/Portfolio/img/projects/DynamicGym.webp',
-        tags: [TAGS.EXPRESS,TAGS.NODE, TAGS.TAILWIND,TAGS.VUE,TAGS.POSTGRESQL],
+        github: 'https://github.com/LucianoFlores98/alakazam-front',
+        image:'/Portfolio/img/projects/AlakazamFigma.webp',
+        tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.NESTJS, TAGS.POSTGRESQL, TAGS.DOCKER],
+    },    
+    {
+        title: 'Prototipo Alakazam',
+        description: 'Prototipo para una plataforma web de alquileres a largo plazo. Propuesta que se hizo en concurso Naves. El proyecto fue seleccionado y bien visto por el jurado. Por lo que se avanzará en un desarrollo con una arquitectura y tecnologías más aptas.',
+        link: '#',
+        github: 'https://github.com/LucianoFlores98/alakazam-front-prototype',
+        image:'/Portfolio/img/projects/Alakazam.png',
+        tags: [TAGS.REACT, TAGS.TAILWIND],
     },
     {
         title: 'EventsApp',
@@ -80,14 +105,6 @@ const PROJECTS = [
         github: '#',
         image:'/Portfolio/img/projects/EventsApp.webp',
         tags: [TAGS.EXPRESS,TAGS.NODE, TAGS.TAILWIND,TAGS.REACT,TAGS.POSTGRESQL],
-    },
-    {
-        title: 'IOT sensors',
-        description: 'Proyecto para trabajo interno de comunidades. App web donde utilizamos un broker para la simulación de un entorno IOT, utilizando en este caso ESP32 con micropython, conexión a internet y sensores. Manejo de usuarios, roles y estaciones.',
-        link: '#',
-        github: '#',
-        image:'/Portfolio/img/projects/IOT.webp',
-        tags: [TAGS.EXPRESS,TAGS.NODE,TAGS.VUE,TAGS.QUASAR,TAGS.MONGODB,TAGS.TAILWIND,TAGS.DOCKER],
     },
 ]
 ---
@@ -108,7 +125,7 @@ const PROJECTS = [
                 ))}
             </ul>
             <img
-            class="rounded-2xl shadow-2xl shadow-white/10 aspect-video snap-center border-2 border-sky-300/50" 
+            class="rounded-2xl shadow-2xl shadow-white/10 aspect-video snap-center border-2 border-yellow-200" 
             src={image} 
             alt={`Captura de pantalla del proyecto ${image}`}>
         </article>
