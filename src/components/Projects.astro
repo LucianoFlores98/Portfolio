@@ -1,133 +1,176 @@
 ---
-import Next from './icons/technologies/Next.astro';
-import Tailwind from './icons/technologies/Tailwind.astro';
-import React from './icons/technologies/React.astro';
-import Vue from './icons/technologies/Vue.astro';
-import Mongo from './icons/technologies/Mongo.astro';
-import Express from './icons/technologies/Express.astro';
-import PostgreSQL from './icons/technologies/PostgreSQL.astro';
-import Node from './icons/technologies/Node.astro';
-import Docker from './icons/technologies/Docker.astro';
-import Quasar from './icons/technologies/Quasar.astro';
-import AstroI from './icons/technologies/AstroI.astro';
-import NestJS from './icons/technologies/NestJS.astro';
-import TypeScript from './icons/technologies/TypeScript.astro';
+import Next from "./icons/technologies/Next.astro";
+import Tailwind from "./icons/technologies/Tailwind.astro";
+import React from "./icons/technologies/React.astro";
+import Vue from "./icons/technologies/Vue.astro";
+import Mongo from "./icons/technologies/Mongo.astro";
+import Express from "./icons/technologies/Express.astro";
+import PostgreSQL from "./icons/technologies/PostgreSQL.astro";
+import Node from "./icons/technologies/Node.astro";
+import Docker from "./icons/technologies/Docker.astro";
+import Quasar from "./icons/technologies/Quasar.astro";
+import AstroI from "./icons/technologies/AstroI.astro";
+import NestJS from "./icons/technologies/NestJS.astro";
+import TypeScript from "./icons/technologies/TypeScript.astro";
 
-const TAGS ={
-    NEXT: {
-        name: "Next.js",
-        class: "bg-black text-white",
-        icon: Next
-    },
-    ASTRO: {
-        name: "Astro",
-        class: "bg-black text-white",
-        icon: AstroI
-    },
-    NESTJS: {
-        name: "NestJS",
-        class: "bg-black text-white",
-        icon: NestJS
-    },
-    TYPESCRIPT: {
-        name: "TypeScript",
-        class: "bg-black text-white",
-        icon: TypeScript
-    },
-    TAILWIND: {
-        name: "Tailwind",
-        class:"bg-cyan-600/60 text-white",
-        icon: Tailwind
-    },
-    REACT: {
-        name: "React.js",
-        class: "bg-teal-500/60	",
-        icon: React
-    },
-    NODE: {
-        name:"Node.js",
-        class:"bg-lime-500/30",
-        icon: Node
-    },
-    EXPRESS: {
-        name:"Express.js",
-        class: "bg-black",
-        icon: Express
-    },
-    VUE: {
-        name:"Vue",
-        class:"bg-green-600/60",
-        icon: Vue
-    },
-    POSTGRESQL: {
-        name:"PostgreSQL",
-        class:"bg-blue-950",
-        icon: PostgreSQL
-    },
-    MONGODB: {
-        name:"MongoDB",
-        class:"bg-green-400/60",
-        icon: Mongo
-    },
-    DOCKER: {
-        name:"Docker",
-        class:"bg-blue-500/50",
-        icon: Docker
-    },
-    QUASAR: {
-        name:"Quasar",
-        class:" bg-cyan-950",
-        icon: Quasar
-    }
-}
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: Next,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroI,
+  },
+  NESTJS: {
+    name: "NestJS",
+    class: "bg-black text-white",
+    icon: NestJS,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-black text-white",
+    icon: TypeScript,
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-cyan-600/60 text-white",
+    icon: Tailwind,
+  },
+  REACT: {
+    name: "React.js",
+    class: "bg-teal-500/60",
+    icon: React,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-lime-500/30",
+    icon: Node,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-black",
+    icon: Express,
+  },
+  VUE: {
+    name: "Vue",
+    class: "bg-green-600/60",
+    icon: Vue,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-blue-950",
+    icon: PostgreSQL,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-green-400/60",
+    icon: Mongo,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-blue-500/50",
+    icon: Docker,
+  },
+  QUASAR: {
+    name: "Quasar",
+    class: " bg-cyan-950",
+    icon: Quasar,
+  },
+};
 
 const PROJECTS = [
-    {
-        title: 'Alakazam',
-        description: 'Plataforma Web para alquileres de largo plazo con un sistema de opiniones/puntuciones para las partes involucradas en el alquiler de un inmueble. - Análisis y diseño funcional. - Armado de contenedores con Docker compose, pensado en seguir una arquitectura de microservicios. - Autenticación y validación de identidad de los usuarios. (Aside project en desarrollo)',
-        link: '#',
-        github: 'https://github.com/LucianoFlores98/alakazam-front',
-        image:'/Portfolio/img/projects/AlakazamFigma.webp',
-        tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.NESTJS, TAGS.POSTGRESQL, TAGS.DOCKER],
-    },    
-    {
-        title: 'Prototipo Alakazam',
-        description: 'Prototipo para una plataforma web de alquileres a largo plazo. Propuesta que se hizo en concurso Naves. El proyecto fue seleccionado y bien visto por el jurado. Por lo que se avanzará en un desarrollo con una arquitectura y tecnologías más aptas.',
-        link: '#',
-        github: 'https://github.com/LucianoFlores98/alakazam-front-prototype',
-        image:'/Portfolio/img/projects/Alakazam.png',
-        tags: [TAGS.REACT, TAGS.TAILWIND],
-    },
-    {
-        title: 'EventsApp',
-        description: 'Aplicacion web para eventos de distintas indoles. Para la busqueda y creacion de los mismos a distintas personas. Validaciones de identidad, manejo de roles, creación y administracion de eventos. Listado de participantes. Compra de entradas, etc.',
-        link: '#',
-        github: '#',
-        image:'/Portfolio/img/projects/EventsApp.webp',
-        tags: [TAGS.EXPRESS,TAGS.NODE, TAGS.TAILWIND,TAGS.REACT,TAGS.POSTGRESQL],
-    },
-]
+  {
+    title: "Alakazam",
+    description:
+      "Plataforma Web para alquileres de largo plazo con un sistema de opiniones/puntuciones para las partes involucradas en el alquiler de un inmueble. - Análisis y diseño funcional. - Armado de contenedores con Docker compose, pensado en seguir una arquitectura de microservicios. - Autenticación y validación de identidad de los usuarios. (Aside project en desarrollo)",
+    link: "#",
+    github: "https://github.com/LucianoFlores98/alakazam-front",
+    image: "/Portfolio/img/projects/AlakazamFigma.webp",
+    tags: [
+      TAGS.REACT,
+      TAGS.TAILWIND,
+      TAGS.TYPESCRIPT,
+      TAGS.NESTJS,
+      TAGS.POSTGRESQL,
+      TAGS.DOCKER,
+    ],
+  },
+  {
+    title: "Prototipo Alakazam",
+    description:
+      "Prototipo para una plataforma web de alquileres a largo plazo. Propuesta que se hizo en concurso Naves. El proyecto fue seleccionado y bien visto por el jurado. Por lo que se avanzará en un desarrollo con una arquitectura y tecnologías más aptas.",
+    link: "#",
+    github: "https://github.com/LucianoFlores98/alakazam-front-prototype",
+    image: "/Portfolio/img/projects/Alakazam.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
+    title: "EventsApp",
+    description:
+      "Aplicacion web para eventos de distintas indoles. Para la busqueda y creacion de los mismos a distintas personas. Validaciones de identidad, manejo de roles, creación y administracion de eventos. Listado de participantes. Compra de entradas, etc.",
+    link: "#",
+    github: "#",
+    image: "/Portfolio/img/projects/EventsApp.webp",
+    tags: [TAGS.EXPRESS, TAGS.NODE, TAGS.TAILWIND, TAGS.REACT, TAGS.POSTGRESQL],
+  },
+];
 ---
 
-{
-    PROJECTS.map(({image, title, description, tags}) => (
-        <article class="p-5 mb-10 rounded-2xl">
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-            <p class="mb-4 text-base font-normal text-gray-200 text-balance [&>b:text-cyan-200]">{description}</p>
-            <ul class="flex gap-x-4 flex-wrap mb-4">
-                {tags.map(tag => (
-                    <li>
-                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 text-base font-normal text-gray-200 mb-2 sm:mb-0`}>                            
-                            <tag.icon class="size-4" />
-                            {tag.name}
-                        </span>
-                    </li>
-                ))}
-            </ul>
+<section class="max-w-[90rem] mx-auto px-4 py-16">
+  <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
+    {
+      PROJECTS.map(({ image, title, description, tags, github, link }) => (
+        <article class="bg-gray-900/50 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 border border-gray-700/50 hover:border-yellow-200/50 group">
+          <div class="relative">
             <img
-            class="rounded-2xl shadow-2xl shadow-white/10 aspect-video snap-center border-2 border-yellow-200" 
-            src={image} 
-            alt={`Captura de pantalla del proyecto ${image}`}>
+              class="aspect-video w-full object-cover object-top"
+              src={image}
+              alt={`Screenshot of ${title} project`}
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-gray-900/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+              {link !== "#" && (
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white bg-yellow-200/20 hover:bg-yellow-200/30 px-4 py-2 rounded-lg transition"
+                >
+                  Visit Site
+                </a>
+              )}
+              {github !== "#" && (
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white bg-yellow-200/20 hover:bg-yellow-200/30 px-4 py-2 rounded-lg transition"
+                >
+                  View Code
+                </a>
+              )}
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-yellow-200 mb-3">{title}</h3>
+            <p class="text-gray-300 mb-4 line-clamp-3 hover:line-clamp-none transition-all duration-300">
+              {description}
+            </p>
+            <div class="flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <span
+                  class={`flex items-center gap-1.5 rounded-full ${tag.class} py-1 px-3 text-sm font-medium`}
+                >
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              ))}
+            </div>
+          </div>
         </article>
-    ))
-}
+      ))
+    }
+  </div>
+</section>

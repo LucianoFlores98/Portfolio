@@ -45,11 +45,11 @@ const {title, description, devMilestones, otherMilestones, date, company, linkCo
     
     </ul>
 
-    <h3 class="my-5 text-sm font-normal leading-none text-sky-200/80 ">Otros Hitos</h3>
+    <h3 class="my-5 text-sm font-normal leading-none text-sky-200/80 ">{otherMilestones && "Otros Hitos"}</h3>
 
     <ul class="List">      
     {
-        otherMilestones.map((otherMilestone) => (
+        otherMilestones?.map((otherMilestone) => (
             <li class="flex mb-3">
                 <Point class="mr-2 mt-1 size-4 min-w-max"/>
                 <fragment set:html={otherMilestone} class="text-base font-normal text-gray-200 text-balance"/>
