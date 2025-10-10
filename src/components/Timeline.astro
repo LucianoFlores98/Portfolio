@@ -3,42 +3,133 @@ import Experience from '../components/Experience.astro';
 
 const EXPERIENCE = [
 {
-        date: '2024 - Actualidad',
-        title: 'Desarrollador Fullstack SSR ― ',
-        description: 
-            'Me contrataron como desarrollador SSR para un proyecto retador: La creación de un sistema de prestamos personales. El proyecto fue pensado con varias partes involucradas (Microservicios) donde c/u posee su propia estructura, tecnología y complejidad, de las cuales detallo a continuacion:',
-        devMilestones:[
-            "<b>Procesamiento de archivos:</b> A partir millones de registros otenidos de entidades financieras como el banco central entre otras, procesar dichos datos, tranformalos y almacenarlos de manera organizada.",
-            "<b>Motor de decisiones:</b> En base a la informacion obtenida del procesamiento y cruzamiento de datos y parametros establecidos, clasificar y evaluar la situacion de cada cliente para otorgarles (o no) planes ajustados a su situación para la obtención de un préstamo.",
-            "<b>Parametría:</b> Sistema de parametría para los administradores o backoffice, provee una interfaz para poder cargar los datos y realizar su procesamiento, también ofrece la modificación y ajustes de toda la parametría del sistema",
-            "<b>Orquestador:</b> Sistema legacy el cual se refactorizó para utilizar el nuevo motor de decisiones. Cuenta tambien con validacion de idéntidad entre muchas funciones de las que se alimentan los 2 frontend",
-            "<b>Frontends:</b> Se crearon 2 frontend utilizando react para los clientes (mobile) y operadores de las sucursales de la entidad financiera.",
-        ],
-        link: 'https://www.bizland.tech/',
-        company: "Bizland",
-        linkCompany: "https://www.bizland.tech/"
-    },
-    {
-        date: '2022 - 2024 (2 Años)',
-        title: 'Desarrollador Fullstack ― ',
-        description: 
-            'Entré a Epidata como desarrollador <b>Java + React</b> Trainee. No han sido las únicas tecnologías que he tenido que usar, ya que además de los proyectos en los que estuve asignado desempeñando tareas de <b>analisis, diseño y desarrollo,</b> también tuve la oportunidad de participar proyectos de innovación que me han permitido aprender otras metodologías vinculadas a la investigación al realizar el análisis y posterior implementación de tecnologías de vanguardia.',
-        devMilestones:[
-            "Colaboré en la realización de pruebas y documentación en el proyecto Sistema Único de Denuncias por Violencia de Género (URGE) el cual comenzó a ser utilizado en todas las dependencias policiales de Argentina.",
-            "Participé en un proyecto interno de la empresa para el manejo de licitaciones. Donde realicé el relevamiento al personal de licitaciones, y posterior análisis, y desarrollo del aplicativo. Utilizando Figma para el prototipado de la UI y para el desarrollo <i><b>- Java, Spring, React, MongoDB, MySQL, Material UI & TypeScript</b></i>",
-            "Dentro de las comunidades de la empresa, participé en el desarrollo de un proyecto IOT como desarrollador fullstack. <i><b>- Vue, quasar, node.js, express.js, mongoDB y docker</b></i>",
-            "Actualmente estoy llevando a cabo el desarrollo de un aplicativo para <b>AGIP</b> desde 0. Inicialmente estuve asignado a la creación del frontend aunque recientemente comencé con el desarrollo del backend. <i><b>- Vue, Bootstrap,Laravel, PHP, Javascript, Docker, SQL Server</b></i>"
-        ],
-        otherMilestones:[
-            "Impartí una charla sobre Metaverso a toda la empresa, dondé se generó cierto interés sobre el tema y posteriormente llevó a la creación de una comunidad interna dedicada al Metaverso y a la Realidad Virtual.",
-            "Me capacité para el uso de <b>Unreal Engine 5</b> y <b>Unity</b>, trabajé junto con capital humano en dicha comunidad en la creación y diseño de un espacio virtual para eventos de la empresa tales como charlas, reuniones e incluso usarlo para el onboarding.",
-            "Junto al equipo IDI, analizamos y desarrollamos un chatbot utilizando una plataforma, evaluando sus capacidades. Recibiendo asistencia por un equipo anglosajón, donde la barrera del idioma no fue un problema. Luego con nuestro analisis y producto final, realicé una presentación a nivel gerencial, la cual llevó a la decisión de avanzar en un proceso de partnership con dicha empresa.",
-            "Al tener conocimientos de <b>Unity</b> se me adjudicó la responsabilidad total de la creación de un MVP mobile de <b>Realidad aumentada<b/>."
-        ],
-        link: 'https://epidata.net/es/',
-        company: "Epidata",
-        linkCompany: "https://epidata.net/es/"
-    }
+    date: '2024 - Actualidad',
+    title: 'Desarrollador Fullstack SSR ― ',
+    description: 
+        'Me contrataron como desarrollador SSR para un proyecto retador: La creación de un sistema de prestamos personales. El proyecto fue pensado con varias partes involucradas (Microservicios) donde c/u posee su propia estructura, tecnología y complejidad.',
+    devMilestones:[
+        {
+            title: "<b>Procesamiento de archivos - (Python - Celery)</b>",
+            details: [
+                "Implementación de workers con Celery para procesamiento asíncrono",
+                "Validación y normalización de datos bancarios",
+                "Integración con servicios de verificación de identidad",
+                "Manejo de colas de procesamiento y retry policies"
+            ]
+        },
+        {
+            title: "<b>Motor de decisiones:</b> En base a la información obtenida del procesamiento y cruzamiento de datos y parámetros establecidos, clasificar y evaluar la situación de cada cliente para otorgarles (o no) planes ajustados a su situación para la obtención de un préstamo.",
+            details: [
+                "Desarrollo de algoritmos de scoring crediticio",
+                "Sistema de reglas configurable para diferentes perfiles",
+                "Integración con bureaus de crédito",
+                "Generación de ofertas personalizadas basadas en riesgo"
+            ]
+        },
+        {
+            title: "<b>Parametría:</b> Sistema de parametría para los administradores o backoffice, provee una interfaz para poder cargar los datos y realizar su procesamiento, también ofrece la modificación y ajustes de toda la parametría del sistema",
+            details: [
+                "Dashboard administrativo con control de accesos por roles",
+                "Configuración de tasas, plazos y productos financieros",
+                "Validación en tiempo real de parámetros críticos",
+                "Auditoría completa de cambios realizados"
+            ]
+        },
+        {
+            title: "<b>Orquestador:</b> Sistema legacy el cual se refactorizó para utilizar el nuevo motor de decisiones. Cuenta también con validación de identidad entre muchas funciones de las que se alimentan los 2 frontend",
+            details: [
+                "Migración progresiva de lógica legacy a nueva arquitectura",
+                "Implementación de APIs RESTful para los frontends",
+                "Sistema de caché para optimizar consultas frecuentes",
+                "Logs estructurados y monitoreo de performance"
+            ]
+        },
+        {
+            title: "<b>Frontends:</b> Se crearon 2 frontend utilizando react para los clientes (mobile) y operadores de las sucursales de la entidad financiera.",
+            details: [
+                "App mobile responsive con React Native",
+                "Portal web para operadores con React + TypeScript",
+                "Implementación de formularios multi-paso con validaciones",
+                "Sistema de notificaciones en tiempo real"
+            ]
+        },
+    ],
+    link: 'https://www.bizland.tech/',
+    company: "Bizland",
+    linkCompany: "https://www.bizland.tech/"
+},
+{
+    date: '2022 - 2024 (2 Años)',
+    title: 'Desarrollador Fullstack ― ',
+    description: 
+        'Entré a Epidata como desarrollador <b>Java + React</b> Trainee. No han sido las únicas tecnologías que he tenido que usar, ya que además de los proyectos en los que estuve asignado desempeñando tareas de <b>analisis, diseño y desarrollo,</b> también tuve la oportunidad de participar proyectos de innovación que me han permitido aprender otras metodologías vinculadas a la investigación al realizar el análisis y posterior implementación de tecnologías de vanguardia.',
+    devMilestones:[
+        "Colaboré en la realización de pruebas y documentación en el proyecto Sistema Único de Denuncias por Violencia de Género (URGE) el cual comenzó a ser utilizado en todas las dependencias policiales de Argentina.",
+        {
+            title: "Participé en un proyecto interno de la empresa para el manejo de licitaciones. Donde realicé el relevamiento al personal de licitaciones, y posterior análisis, y desarrollo del aplicativo.",
+            details: [
+                "Utilicé <b>Figma</b> para el prototipado de la UI",
+                "Stack: <b>Java, Spring, React, MongoDB, MySQL</b>",
+                "Implementación con <b>Material UI & TypeScript</b>",
+                "Sistema de seguimiento de estados de licitaciones",
+                "Generación de reportes automatizados"
+            ]
+        },
+        {
+            title: "Dentro de las comunidades de la empresa, participé en el desarrollo de un proyecto IOT como desarrollador fullstack.",
+            details: [
+                "Frontend con <b>Vue + Quasar</b>",
+                "Backend con <b>Node.js + Express.js</b>",
+                "Base de datos <b>MongoDB</b>",
+                "Containerización con <b>Docker</b>",
+                "Integración con sensores y dispositivos IoT"
+            ]
+        },
+        {
+            title: "Actualmente estoy llevando a cabo el desarrollo de un aplicativo para <b>AGIP</b> desde 0. Inicialmente estuve asignado a la creación del frontend aunque recientemente comencé con el desarrollo del backend.",
+            details: [
+                "Frontend: <b>Vue + Bootstrap</b>",
+                "Backend: <b>Laravel + PHP</b>",
+                "Base de datos: <b>SQL Server</b>",
+                "Infraestructura: <b>Docker</b>",
+                "Implementación de APIs RESTful",
+                "Sistema de autenticación y autorización"
+            ]
+        }
+    ],
+    otherMilestones:[
+        {
+            title: "Impartí una charla sobre Metaverso a toda la empresa, donde se generó cierto interés sobre el tema y posteriormente llevó a la creación de una comunidad interna dedicada al Metaverso y a la Realidad Virtual.",
+            details: [
+                "Presentación sobre casos de uso empresariales del Metaverso",
+                "Demostración práctica con dispositivos VR",
+                "Liderazgo en la comunidad de Metaverso/VR de la empresa"
+            ]
+        },
+        {
+            title: "Me capacité para el uso de <b>Unreal Engine 5</b> y <b>Unity</b>, trabajé junto con capital humano en dicha comunidad en la creación y diseño de un espacio virtual para eventos de la empresa tales como charlas, reuniones e incluso usarlo para el onboarding.",
+            details: [
+                "Desarrollo de entorno 3D para eventos corporativos",
+                "Sistema de avatares personalizables",
+                "Integración con plataformas de videoconferencia",
+                "Espacios interactivos para onboarding de nuevos empleados"
+            ]
+        },
+        "Junto al equipo IDI, analizamos y desarrollamos un chatbot utilizando una plataforma, evaluando sus capacidades. Recibiendo asistencia por un equipo anglosajón, donde la barrera del idioma no fue un problema. Luego con nuestro análisis y producto final, realicé una presentación a nivel gerencial, la cual llevó a la decisión de avanzar en un proceso de partnership con dicha empresa.",
+        {
+            title: "Al tener conocimientos de <b>Unity</b> se me adjudicó la responsabilidad total de la creación de un MVP mobile de <b>Realidad aumentada</b>.",
+            details: [
+                "Desarrollo completo del MVP desde cero",
+                "Implementación de tracking de objetos en AR",
+                "Optimización para dispositivos móviles Android/iOS",
+                "Testing y refinamiento de experiencia de usuario"
+            ]
+        }
+    ],
+    link: 'https://epidata.net/es/',
+    company: "Epidata",
+    linkCompany: "https://epidata.net/es/"
+}
 ]
 ---
 
