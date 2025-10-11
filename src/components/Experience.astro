@@ -158,7 +158,7 @@ const {title, description, devMilestones, otherMilestones, date, company, linkCo
         
         toggleButtons.forEach(button => {
             button.addEventListener('click', () => {
-                const targetId = button.getAttribute('data-target');
+                const targetId = button.getAttribute('data-target') as string;
                 const sublist = document.getElementById(targetId);
                 
                 if (sublist) {
